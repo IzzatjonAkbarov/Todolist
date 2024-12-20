@@ -45,8 +45,8 @@ function tododelete(task) {
 function editing(params) {
   const newedit = prompt(" tahrirlash mumkin ", params);
   if (newedit === null || newedit.trim() === "") {
-  } else {
     return alert("bo'sh joy bilan tahrirlash mumkin emas");
+  } else {
   }
   let gettingdata = JSON.parse(localStorage.getItem("todo")) || [];
   const idx = gettingdata.indexOf(params);
