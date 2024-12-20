@@ -1,7 +1,9 @@
 const form = document.getElementById("form");
 const Task = document.getElementById("Task");
 window.addEventListener("DOMContentLoaded", functionaddin);
-
+const now = new Date().getHours();
+const now1 = new Date().getMinutes();
+const now2 = new Date().getSeconds();
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   toDo();
@@ -15,6 +17,7 @@ function toDo() {
   } else {
     document.getElementById("error").style.display = "none";
   }
+
   const newdata = [...getdata, input];
 
   localStorage.setItem("todo", JSON.stringify(newdata));
@@ -31,8 +34,8 @@ function add(task) {
   div.innerHTML = `<span> ${task} </span>
             <div class="Edit_delete">
              <button onclick="editing('${task}')">Edit</button>
-      <button onclick="tododelete('${task}')">Delete</button>
-            </div>`;
+      <button onclick="tododelete('${task}')">Delete</button><span>${now}:${now1}</span>
+            </div> `;
   Task.append(div);
 }
 function tododelete(task) {
