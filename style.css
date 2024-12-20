@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background: #363f4f;
+}
+.top {
+  height: 50px;
+  background: #000;
+  width: 100%;
+}
+.h1 {
+  padding: 30px 0;
+
+  font-size: 20px;
+  color: #5b6575;
+}
+.divall {
+  width: 60%;
+  margin: 0 auto;
+}
+form {
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+}
+form input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px 0 0 10px;
+  background-color: #1f2936;
+  outline: none;
+  color: #717272;
+}
+.btn {
+  width: 20%;
+  padding: 8px;
+
+  padding-inline: 30px;
+  border-radius: 0 10px 10px 0;
+}
+.task_item {
+  width: 100%;
+  padding: 8px;
+  height: 40px;
+
+  border-radius: 8px;
+  background-color: #101826;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+span {
+  color: white;
+}
+.Edit_delete {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  button:first-of-type {
+    padding: 8px;
+    background: transparent;
+    border: none;
+    font-size: 19px;
+    color: #460974;
+  }
+  button:last-of-type {
+    padding: 8px;
+    background: transparent;
+    border: none;
+    font-size: 19px;
+    color: #a5292a;
+  }
+}
