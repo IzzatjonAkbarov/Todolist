@@ -39,7 +39,6 @@ form input {
 .btn {
   width: 20%;
   padding: 8px;
-
   padding-inline: 30px;
   border-radius: 0 10px 10px 0;
 }
@@ -76,4 +75,9 @@ span {
     font-size: 19px;
     color: #a5292a;
   }
+}
+.span {
+  color: red;
+  padding: 10px;
+  display: none;
 }

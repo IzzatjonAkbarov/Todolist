@@ -11,8 +11,8 @@ function toDo() {
 
   let input = form.input.value;
   if (input.trim() === "") {
-    return;
-  }
+    return (document.getElementById("error").style.display = "block");
+  } else document.getElementById("error").style.display = "none";
   const newdata = [...getdata, input];
 
   localStorage.setItem("todo", JSON.stringify(newdata));
@@ -41,7 +41,7 @@ function tododelete(task) {
   functionaddin();
 }
 function editing(params) {
-  const newedit = prompt("iltimos tahrirlang ", params);
+  const newedit = prompt(" tahrirlash mumkin ", params);
   if (newedit === null || newedit.trim() === "") return;
   let gettingdata = JSON.parse(localStorage.getItem("todo")) || [];
   const idx = gettingdata.indexOf(params);
@@ -49,6 +49,6 @@ function editing(params) {
     gettingdata[idx] = newedit;
     localStorage.setItem("todo", JSON.stringify(gettingdata));
     Task.innerHTML = "";
-    loadTasks();
+    functionaddin();
   }
 }
