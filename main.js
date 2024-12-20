@@ -12,7 +12,9 @@ function toDo() {
   let input = form.input.value;
   if (input.trim() === "") {
     return (document.getElementById("error").style.display = "block");
-  } else document.getElementById("error").style.display = "none";
+  } else {
+    document.getElementById("error").style.display = "none";
+  }
   const newdata = [...getdata, input];
 
   localStorage.setItem("todo", JSON.stringify(newdata));
@@ -42,7 +44,10 @@ function tododelete(task) {
 }
 function editing(params) {
   const newedit = prompt(" tahrirlash mumkin ", params);
-  if (newedit === null || newedit.trim() === "") return;
+  if (newedit === null || newedit.trim() === "") {
+  } else {
+    return alert("bo'sh joy bilan tahrirlash mumkin emas");
+  }
   let gettingdata = JSON.parse(localStorage.getItem("todo")) || [];
   const idx = gettingdata.indexOf(params);
   if (idx !== -1) {
